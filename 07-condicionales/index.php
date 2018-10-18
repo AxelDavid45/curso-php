@@ -48,4 +48,30 @@ if($pais == 'Mexico' || $pais == 'Colombia' || $pais == 'Espana') {
 }
 
 
+echo '<hr>';
+
+//switch
+
+$dia2 = 4;
+
+switch($dia2) {
+    case 1:
+        echo '<h1>Es lunes</h1>';
+        break;
+    case 2:
+        echo '<h1>Es Martes</h1>';
+        break;
+    case 3:
+        echo '<h1>Es Miercoles</h1>';
+        break;
+    case 4:
+        echo '<h1>Es Jueves</h1>';
+        break;
+    case 5:
+        echo '<h1>Es Viernes</h1>';
+        break;
+    default:
+        echo '<h1>Es fin de semana</h1>';
+}
+
 ?>
