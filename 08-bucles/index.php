@@ -35,9 +35,17 @@ while($contador <= 10) {
     $contador++;
 }
 
+echo '<hr>';
 
+//Bucle dowhile Hace al menos una vez
+$edad = 17;
+$contador2 = 0;
+do {
+    echo "Acceso $contador2 <br>";
+    $contador2++;
 
-//var_dump($numero);
+}while($edad >= 18 && $contador2 <=10);
+
 
 
 ?>
