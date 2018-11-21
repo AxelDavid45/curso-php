@@ -1,0 +1,2 @@
+# ACTUALIZAR UNA FILA O MUCHAS
+UPDATE usuarios SET fecha_registro = CURRENT_DATE() WHERE id = 1;

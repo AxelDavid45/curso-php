@@ -1,0 +1,17 @@
+#INSERTS PARA CATEGORIAS#
+INSERT INTO categorias VALUES(null,'Accion');
+INSERT INTO categorias VALUES(null,'Rol');
+INSERT INTO categorias VALUES(null,'Deportes');
+
+#INSERTS PARA POSTS#
+INSERT INTO posts VALUES(NULL,2,1,'REVIEW FORTNITE','Lo mejor de fortnite',CURDATE());
+INSERT INTO posts VALUES(NULL,2,2,'REVIEW Ajedrez','Lo mejor de Ajedrez',CURDATE());
+INSERT INTO posts VALUES(NULL,2,3,'REVIEW FIFA19','Lo mejor de FIFA',CURDATE());
+
+INSERT INTO posts VALUES(NULL,3,1,'REVIEW COD','Lo mejor de Call of Duty',CURDATE());
+INSERT INTO posts VALUES(NULL,3,2,'REVIEW Buscaminas','Lo mejor de Buscaminas 2018',CURDATE());
+INSERT INTO posts VALUES(NULL,3,3,'REVIEW F1 2K19','Lo mejor de F1',CURDATE());
+
+INSERT INTO posts VALUES(NULL,4,1,'REVIEW LOL','Lo mejor de LOL online',CURDATE());
+INSERT INTO posts VALUES(NULL,4,2,'REVIEW PING PONG','Lo mejor de PING PONG ONLINE 2018',CURDATE());
+INSERT INTO posts VALUES(NULL,4,3,'REVIEW PES 19','Lo mejor de PES 19 ONLINE',CURDATE());
