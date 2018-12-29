@@ -8,6 +8,8 @@
     mysqli_query($conexion,"SET NAMES utf8");
 
     //Iniciar la sesion
+if(!isset($_SESSION)) {
     session_start();
+}
 
 ?>
