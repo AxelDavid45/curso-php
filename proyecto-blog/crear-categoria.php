@@ -3,7 +3,7 @@
 <?php require_once "./includes/aside.php"; ?>
 
 <div id="principal">
-    <h1>Creacion de entradas</h1>
+    <h1>Creacion de categorias</h1>
     <?php if(isset($_SESSION['cat_correcto'])) : ?>
         <div class="alerta">
             <?=$_SESSION['cat_correcto']; ?>

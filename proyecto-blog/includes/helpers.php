@@ -15,21 +15,34 @@ function borrarErrores() {
 //    $session_end = session_destroy();
     if(isset($_SESSION['errores'])) {
         $_SESSION["errores"] = null;
-        unset($_SESSION['errores']);
     }
     if (isset($_SESSION['completo'])) {
         $_SESSION['completo'] = null;
-        unset($_SESSION['completo']);
     }
-    //Elimina errores de creacion de categorias
+    /*===============================================
+     ELIMINA LOS ERRORES DE LA CREACION DE CATEGORIAS
+     ================================================*/
     if (isset($_SESSION['cat_correcto'])) {
         $_SESSION['cat_correcto'] = null;
-        unset($_SESSION['cat_correctot']);
     }
     if (isset($_SESSION['cat_error'])) {
         $_SESSION['cat_error'] = null;
-        unset($_SESSION['cat_cerror']);
     }
+    /*===============================================
+     FIN  ERRORES DE LA CREACION DE CATEGORIAS
+     ================================================*/
+    /*================================================
+     * BORRA LOS ERRORES DE LA SECCION CREAR ENTRADA
+     * ===============================================*/
+    if (isset($_SESSION['e'])) {
+        $_SESSION['e'] = null;
+    }
+    if (isset($_SESSION['errores-entrada'])) {
+        $_SESSION['errores-entrada'] = null;
+    }
+    /*================================================
+     * FIN ERRORES DE LA SECCION CREAR ENTRADA
+     * ===============================================*/
 }
 //Obtiene las categorias
 function obtenerCategorias($conexion) {
