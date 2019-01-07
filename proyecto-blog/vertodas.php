@@ -3,13 +3,13 @@
 
 <!--Principal-->
 <div id="principal">
-    <h1>Actividad reciente</h1>
+    <h1>Todas las entradas</h1>
 
-    <?php $entradas = obtenerEntradas($conexion,3);
-        if(!empty($entradas)) :
+    <?php $entradas = obtenerEntradas($conexion);
+    if(!empty($entradas)) :
 
         while($entrada = mysqli_fetch_assoc($entradas)) :
-    ?>
+            ?>
             <article class="entrada">
                 <a href="#">
                     <h2><?=$entrada['titulo']; ?></h2>
@@ -19,18 +19,14 @@
             </article>
 
 
-    <?php  endwhile; ?>
+        <?php  endwhile; ?>
     <?php  else :?>
-            <?php var_dump($entradas);?>
-    <article class="entrada">
-                    <h2>No se encontraron entradas</h2>
-                    <p>Intenta mas tarde...</p>
-            </article>
+        <?php var_dump($entradas);?>
+        <article class="entrada">
+            <h2>No se encontraron entradas</h2>
+            <p>Intenta mas tarde...</p>
+        </article>
     <?php endif;?>
-
-    <div id="ver-todas">
-        <a href="vertodas.php">Ver todas las entradas</a>
-    </div>
 </div>
 
 <!--FOOTER-->

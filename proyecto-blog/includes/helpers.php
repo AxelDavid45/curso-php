@@ -54,10 +54,32 @@ function obtenerCategorias($conexion) {
     }
     return $resultado;
 }
-//obtiene las categorias
-function obtenerEntradas($conexion) {
+function obtenerCategoria($conexion,$id) {
     $resultado = [];
-    $sql = "SELECT p.*,c.nombre AS 'categoria' FROM posts p INNER JOIN categorias c ON c.id = p.categoria_id ORDER BY p.fecha_creacion DESC;";
+    $sql = "SELECT * FROM categorias WHERE id = {$id} ORDER BY id ;";
+    $categorias = mysqli_query($conexion,$sql);
+    if($categorias && mysqli_num_rows($categorias) >= 1) {
+        $resultado = mysqli_fetch_assoc($categorias);
+    }
+    return $resultado;
+}
+
+//obtiene las categorias
+function obtenerEntradas($conexion, $limit = null, $id = null) {
+    $resultado = [];
+    $sql = "SELECT p.*,c.nombre AS 'categoria' FROM posts p INNER JOIN categorias c ON c.id = p.categoria_id";
+
+    if($id) {
+        $sql .= " WHERE c.id = $id";
+
+    }
+
+
+    $sql .=  " ORDER BY p.fecha_creacion DESC";
+    if($limit != null) {
+        $sql .= " LIMIT $limit";
+    }
+    //Comprueba que exista el limite
     $entradas = mysqli_query($conexion,$sql);
 
     if($entradas && mysqli_num_rows($entradas) >=1) {
