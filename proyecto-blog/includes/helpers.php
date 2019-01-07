@@ -67,7 +67,8 @@ function obtenerCategoria($conexion,$id) {
 //obtiene las categorias
 function obtenerEntradas($conexion, $limit = null, $id = null) {
     $resultado = [];
-    $sql = "SELECT p.*,c.nombre AS 'categoria' FROM posts p INNER JOIN categorias c ON c.id = p.categoria_id";
+    $sql = "SELECT p.*,c.nombre AS 'categoria', CONCAT(u.nombre,' ',u.apellidos) AS 'usuario' FROM posts p INNER JOIN categorias c ON c.id = p.categoria_id ".
+            "INNER JOIN usuarios u ON u.id = p.usuario_id";
 
     if($id) {
         $sql .= " WHERE c.id = $id";
@@ -84,6 +85,19 @@ function obtenerEntradas($conexion, $limit = null, $id = null) {
 
     if($entradas && mysqli_num_rows($entradas) >=1) {
         $resultado = $entradas;
+    }
+    return $resultado;
+}
+
+//Obtiene solo una entradda
+function obtenerEntrada($conexion,$id) {
+    $resultado = [];
+    $sql = "SELECT p.*, c.nombre AS 'categoria_nombre' FROM posts p ".
+            "INNER JOIN categorias c ON c.id = p.categoria_id ".
+            "WHERE p.id = {$id}";
+    $entrada = mysqli_query($conexion,$sql);
+    if($entrada && mysqli_num_rows($entrada) >= 1) {
+        $resultado = mysqli_fetch_assoc($entrada);
     }
     return $resultado;
 }
