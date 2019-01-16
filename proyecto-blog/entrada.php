@@ -12,7 +12,7 @@
     <p><?=$entrada_actual['descripcion'];?></p>
 
     <?php   if(isset($_SESSION['usuario'])  && $_SESSION['usuario']['id'] == $entrada_actual['usuario_id']) : ?>
-        <a href="editar_entrada.php" class="boton boton-verde">Editar entrada</a>
+        <a href="editar_entrada.php?id=<?=$entrada_actual['id'];?>&cat=<?=$entrada_actual['categoria_id'];?>" class="boton boton-verde">Editar entrada</a>
         <a href="borrar_entrada.php?id=<?=$entrada_actual['id'];?>&cat=<?=$entrada_actual['categoria_id'];?>" class="boton boton-rojo">Borrar entrada</a>
     <?php  endif; ?>
 </div>

@@ -23,7 +23,14 @@ if(isset($_POST)) {
     }
     //Contamos los errores
     if(count($errores) == 0) {
-        $sql = "INSERT INTO posts VALUES(null,$usuario_id,$categoria,'$titulo','$descripcion',CURDATE());";
+        $id_get = (int)$_GET['id'];
+        if(isset($_GET['editar'])) {
+            $sql = "UPDATE posts SET titulo = '$titulo',descripcion = '$descripcion',categoria_id = $categoria ".
+                    "WHERE id = $id_get AND usuario_id = $usuario_id;";
+        } else {
+            $sql = "INSERT INTO posts VALUES(null,$usuario_id,$categoria,'$titulo','$descripcion',CURDATE());";
+        }
+
         $query = mysqli_query($conexion,$sql);
         if($query) {
             $_SESSION['e']['inf'] = "Guardado correctamente, dirigete al inicio";
@@ -33,5 +40,10 @@ if(isset($_POST)) {
     } else {
         $_SESSION['errores-entrada'] = $errores;
     }
+
 }
-header('Location:crear-entrada.php');
+if(isset($_GET['editar'])) {
+    header('Location:editar_entrada.php?id='.$id_get);
+} else {
+    header('Location:crear-entrada.php');
+}

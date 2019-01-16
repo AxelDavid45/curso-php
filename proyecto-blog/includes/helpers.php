@@ -65,17 +65,17 @@ function obtenerCategoria($conexion,$id) {
 }
 
 //obtiene las categorias
-function obtenerEntradas($conexion, $limit = null, $id = null) {
+function obtenerEntradas($conexion, $limit = null, $id = null,$busqueda = null) {
     $resultado = [];
     $sql = "SELECT p.*,c.nombre AS 'categoria', CONCAT(u.nombre,' ',u.apellidos) AS 'usuario' FROM posts p INNER JOIN categorias c ON c.id = p.categoria_id ".
             "INNER JOIN usuarios u ON u.id = p.usuario_id";
 
     if($id) {
         $sql .= " WHERE c.id = $id";
-
     }
-
-
+    if($busqueda) {
+        $sql.= " WHERE p.titulo LIKE '%{$busqueda}%' OR p.descripcion LIKE '%{$busqueda}%' ";
+    }
     $sql .=  " ORDER BY p.fecha_creacion DESC";
     if($limit != null) {
         $sql .= " LIMIT $limit";

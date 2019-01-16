@@ -1,6 +1,13 @@
 
 
 <aside id="sidebar">
+    <div class="bloque">
+        <h3>Buscar:</h3>
+        <form action="busqueda.php" method="POST">
+            <input type="text" name="busqueda">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
     <?php if(isset($_SESSION['usuario'])) :  ?>
     <div id="login" class="bloque">
         <h3>Bienvenido <?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?></h3>
