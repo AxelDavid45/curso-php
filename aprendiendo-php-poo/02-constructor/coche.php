@@ -32,4 +32,18 @@ class Coche {
     public function getVelocidad() {
         return $this->velocidad;
     }
+    //Tipado de parametros
+    public function mostrarInformacion(Coche $objeto) {
+        if(is_object($objeto)) {
+            $informacion = "<h1>Datos del objeto Coche</h1>";
+            $informacion .= "<br>Color : {$objeto->color}";
+            $informacion .= "<br>Velocidad : {$objeto->velocidad}";
+            $informacion .= "<br>marca : {$objeto->marca}";
+        } else {
+            $informacion = "El dato que pasaste no es un objeto tipo coche";
+        }
+
+        return $informacion;
+
+    }
 }
