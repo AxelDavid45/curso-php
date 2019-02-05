@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
     <title>Tienda online de camisetas</title>
 </head>
 <body>
@@ -84,44 +86,47 @@
         <!--  CONTENIDO PRINCIPAL --->
 
         <div id="central">
-            <div class="product">
-                <img src="assets/img/productos-destacados.png" alt="">
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
-            </div>
-            <div class="product">
-                <img src="assets/img/camiseta.png" alt="">
-                <h2>Camiseta azul</h2>
-                <p>$100 pesos</p>
-                <a href="#">Agregar al carrito</a>
+            <h1>Productos destacados</h1>
+            <div class="flex-products">
+                <div class="product">
+                    <img src="assets/img/productos-destacados.png" alt="">
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
+                <div class="product">
+                    <img src="assets/img/camiseta.png" alt="">
+                    <h2>Camiseta azul</h2>
+                    <p>$100 pesos</p>
+                    <a href="#">Agregar al carrito</a>
+                </div>
             </div>
         </div>
     </div>

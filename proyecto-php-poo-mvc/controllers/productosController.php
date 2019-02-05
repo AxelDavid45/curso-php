@@ -1,6 +1,7 @@
 <?php
 class productosController {
     public function index() {
-        echo "Controlador de productos";
+        //Renderizamos la vista de prod. destacados
+        require_once "views/productos/destacados.php";
     }
 }
